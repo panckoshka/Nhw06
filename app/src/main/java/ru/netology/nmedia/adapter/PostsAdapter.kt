@@ -59,14 +59,22 @@ class PostViewHolder(
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            tvLikes.text = countFinish(post.likes)
-            tvReposts.text = countFinish(post.reposts)
 
-            if (post.likedByMe) {
-                like.setImageResource(R.drawable.ic_liked_24)
-            } else {
-                like.setImageResource(R.drawable.ic_like_24)
-            }
+            share.text = countFinish(post.reposts)
+
+            like.isChecked = post.likedByMe
+            like.text = countFinish(post.likes)
+
+//          вместо
+//            tvReposts.text = countFinish(post.reposts)
+//          tvLikes.text = countFinish(post.likes)
+//            if (post.likedByMe) {
+//                like.setImageResource(R.drawable.ic_liked_24)
+//            } else {
+//                like.setImageResource(R.drawable.ic_like_24)
+//            }
+//            like.text = "${post.likes}"
+
             like.setOnClickListener {
                 listener.onLike(post)
             }
@@ -74,15 +82,15 @@ class PostViewHolder(
                 listener.onShare(post)
             }
             menu.setOnClickListener {
-                PopupMenu(it.context, it).apply{
+                PopupMenu(it.context, it).apply {
                     inflate(R.menu.post_menu)
                     setOnMenuItemClickListener { menuItem ->
-                        when(menuItem.itemId){
-                            R.id.remuve ->{
+                        when (menuItem.itemId) {
+                            R.id.remuve -> {
                                 listener.onRemove(post)
                                 return@setOnMenuItemClickListener true
                             }
-                            R.id.edit ->{
+                            R.id.edit -> {
                                 listener.onEdit(post)
                                 return@setOnMenuItemClickListener true
                             }

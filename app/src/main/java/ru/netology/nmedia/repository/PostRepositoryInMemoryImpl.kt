@@ -71,7 +71,7 @@ class PostRepositoryInMemoryImpl : PostRepository {
             published = "21 мая в 18:36",
             likedByMe = false
         ),
-    )
+    ).reversed()
 
     private val data = MutableLiveData(posts)
 
