@@ -7,8 +7,10 @@
     <string name="description_post_like">Нравится</string>
     <string name="description_post_share">Поделиться</string>
     <string name="post_menu_remove">Удалить</string>
-    <string name="post_input_text">Текст роста</string>
+    <string name="post_input_text">Текст поста</string>
     <string name="empty_post_error">Ошибка</string>
     <string name="post_menu_edit">Редактировать</string>
     <string name="undo_changes">Отмена изменений</string>
+    <string name="add_post">Добавит пост</string>
+    <string name="empty_content_error">Не содержит контента</string>
 </resources>

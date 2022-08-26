@@ -10,14 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NMedia">
         <activity
+            android:name=".activity.PostActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.SEND" />-->
+<!--                <data android:mimeType="text/plain" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+
+        </activity>
+        <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
     </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="*"/>
+        </intent>
+    </queries>
 
 </manifest>

@@ -10,4 +10,6 @@
     <string name="undo_changes">Undo changes</string>
     <string name="post_input_text">Post text</string>
     <string name="empty_post_error">Post is blank</string>
+    <string name="empty_content_error">Content is empty</string>
+    <string name="add_post">Add post</string>
 </resources>

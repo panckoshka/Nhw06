@@ -109,7 +109,7 @@ class PostRepositoryInMemoryImpl : PostRepository {
         if (post.id == 0L) {
             posts = listOf(
                 post.copy(
-                    id = posts.firstOrNull()?.id ?: 1L
+                    id = nextId++
                 )
             ) + posts
             data.value = posts
